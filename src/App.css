@@ -31,18 +31,24 @@
   border: 0;
   box-sizing: border-box;
 }
-.dark{
-    --color-gray-0: #fff;
-  --color-gray-100: #eee;
-  --color-gray-200: #ccc;
-  --color-gray-300: #bbb;
-  --color-gray-400: #999;
-  --color-gray-500: #777;
-  --color-gray-600: #555;
-  --color-gray-700: #333;
-  --color-gray-800: #111;
-  --color-gray-900: #000;
+  /* -------------------- DARK THEME GLOBAL VARIABLES -------------------- */
+body.dark {
+  --color-gray-0: #1f2937;       /* dark background */
+  --color-gray-100: #111827;     /* slightly lighter bg */
+  --color-gray-200: #1e40af;     /* primary dark blue tone */
+  --color-gray-300: #1e3a8a;
+  --color-gray-400: #2563eb;
+  --color-gray-500: #3b82f6;
+  --color-gray-700: #60a5fa;
+  --color-gray-900: #dbeafe;     /* text color */
+  --color-primary: #3b82f6;
+  --color-primary-variant: #60a5fa;
+  --color-success: #10b981;
+  --color-danger: #f87171;
+  background: var(--color-gray-100);
+  color: var(--color-gray-900);
 }
+
 body{
   font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
@@ -230,7 +236,7 @@ nav{
 /* RESULTS*/
 .results-section {
   min-height: 100vh;
-  background: var(--bg, #f7fbff);
+  background: var(--color-gray-100);
   padding: 48px 16px;
   box-sizing: border-box;
   font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
@@ -245,7 +251,7 @@ nav{
   text-align: center;
   font-size: 28px;
   margin: 0 0 28px 0;
-  color: var(--title, #0f172a);
+  color: var(--color-gray-900);
   font-weight: 700;
 }
 .results-grid {
@@ -254,7 +260,7 @@ nav{
   justify-content: center;
 }
 .results-card {
-  background: var(--card, #fff);
+  background: var(--color-gray-0);
   border-radius: 16px;
   padding: 16px;
   box-shadow: 0 6px 25px rgba(15, 23, 42, 0.06);
@@ -612,7 +618,7 @@ nav{
 /* Container for the entire election details page */
 .electionDetails {
   padding: 48px 16px;
-  background: var(--bg, #f7fbff);
+  background: var(--color-gray-100);
   min-height: 100vh;
   font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
@@ -952,4 +958,315 @@ nav{
   .footer-section {
     width: 100%;
   }
+}
+/* 🌌 ANIMATED GLOW DARK MODE */
+/* ------------------ DARK THEME ------------------ */
+/* DARK BLUE GLOW THEME */
+body.dark {
+  --color-gray-0: #0f172a;
+  --color-gray-100: #1e293b;
+  --color-gray-200: #334155;
+  --color-gray-300: #475569;
+  --color-gray-400: #64748b;
+  --color-gray-500: #94a3b8;
+  --color-gray-600: #cbd5e1;
+  --color-gray-700: #e2e8f0;
+  --color-gray-800: #f1f5f9;
+  --color-gray-900: #ffffff;
+  --color-primary: #3b82f6;
+  --color-primary-variant: #60a5fa;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px rgba(59,130,246,0.4), 0 0 10px rgba(59,130,246,0.2); }
+  50% { box-shadow: 0 0 15px rgba(59,130,246,0.6), 0 0 30px rgba(59,130,246,0.3); }
+  100% { box-shadow: 0 0 5px rgba(59,130,246,0.4), 0 0 10px rgba(59,130,246,0.2); }
+}
+
+body.dark .btn.primary,
+body.dark .candidate-vote-btn,
+body.dark .vote-bar-fill {
+  animation: glow 2s infinite alternate;
+}
+
+body.dark .nav__container a:hover,
+body.dark .theme__toggle-btn:hover,
+body.dark .nav__toggle-btn:hover {
+  text-shadow: 0 0 8px rgba(59,130,246,0.7);
+}
+
+body.dark .candidate,
+body.dark .candidate-card,
+body.dark .results-card {
+  transition: all 0.3s ease;
+}
+
+body.dark .candidate:hover,
+body.dark .candidate-card:hover,
+body.dark .results-card:hover {
+  box-shadow: 0 0 20px rgba(59,130,246,0.3), 0 0 10px rgba(59,130,246,0.2);
+}
+
+body.dark .confirm__vote-content,
+body.dark .modal__content {
+  box-shadow: 0 0 15px rgba(37,99,235,0.4);
+}
+
+body.dark .footer,
+body.dark .footer-icons a:hover {
+  background: linear-gradient(90deg, #1e3a8a 0%, #2563eb 50%, #1e40af 100%);
+  color: #60a5fa;
+  text-shadow: 0 0 10px rgba(59,130,246,0.7);
+}
+/* =========================
+   GLOBAL THEME CONTAINER
+========================= */
+/* =========================================
+   GLOBAL DARK THEME — FINAL OVERRIDE
+   PASTE AT VERY BOTTOM OF App.css
+========================================= */
+
+/* Base page */
+/* Light theme */
+body.light {
+  --bg: #f7fbff;
+  --card: #fff;
+  --title: #0f172a;
+  --text: #6b7280;
+}
+
+/* Dark theme */
+body.dark {
+  --bg: #1f2937;
+  --card: #111827;
+  --title: #f3f4f6;
+  --text: #d1d5db;
+}
+
+/* Page wrapper */
+.logout-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  padding: 16px;
+  background: var(--bg);
+}
+
+/* Card styling */
+.logout-card {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 48px 32px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 16px 40px rgba(15,23,42,0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Icon */
+.logout-icon {
+  font-size: 48px;
+  color: #2563eb;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Title */
+.logout-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--title);
+  margin-bottom: 12px;
+}
+
+/* Description */
+.logout-text {
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+
+/* Buttons wrapper */
+.logout-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logout-button.primary {
+  background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 6px 18px rgba(37,99,235,0.15);
+}
+
+.logout-button.secondary {
+  background: transparent;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+/* Button click effect */
+.logout-button:active {
+  transform: scale(0.97);
+}
+
+body.dark {
+  background: linear-gradient(180deg, #020617, #0f172a, #020617);
+  color: #e5e7eb;
+}
+
+/* Force all main wrappers to obey dark mode */
+body.dark main,
+body.dark section,
+body.dark .container,
+body.dark .page,
+body.dark .results,
+body.dark .logout,
+body.dark .electionDetails,
+body.dark .candidates,
+body.dark .confirm-vote-page {
+  background: transparent;
+  color: #e5e7eb;
+}
+
+/* Cards everywhere */
+body.dark .card,
+body.dark .candidate,
+body.dark .candidate-card,
+body.dark .results-card,
+body.dark .confirm__vote-content,
+body.dark .modal__content {
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #1e293b;
+  box-shadow: 0 0 15px rgba(59,130,246,0.25);
+}
+
+/* Titles & text */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark p,
+body.dark span,
+body.dark strong {
+  color: #e5e7eb;
+}
+
+/* Links */
+body.dark a {
+  color: #60a5fa;
+}
+body.dark a:hover {
+  color: #93c5fd;
+}
+
+/* Buttons */
+body.dark .btn,
+body.dark button {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  border: none;
+}
+
+body.dark .btn:hover,
+body.dark button:hover {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+/* Vote bars */
+body.dark .vote-bar {
+  background: #1e293b;
+}
+body.dark .vote-bar-fill {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+
+/* Navbar */
+body.dark nav {
+  background: linear-gradient(90deg, #020617, #1e293b, #020617);
+  border-bottom: 1px solid #1e293b;
+}
+
+body.dark .nav__logo {
+  color: #fff;
+}
+
+body.dark .nav__container a {
+  color: #cbd5f5;
+}
+
+body.dark .nav__container a.active,
+body.dark .nav__container a:hover {
+  color: #60a5fa;
+}
+
+/* Footer — FIXED */
+body.dark footer,
+body.dark .footer {
+  background: linear-gradient(90deg, #020617, #1e293b, #020617);
+  color: #cbd5f5;
+}
+
+body.dark .footer-icons a {
+  color: #60a5fa;
+}
+
+body.dark .footer-icons a:hover {
+  color: #93c5fd;
+  text-shadow: 0 0 10px rgba(59,130,246,0.7);
+}
+
+/* Inputs */
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+}
+
+body.dark input::placeholder {
+  color: #94a3b8;
+}
+
+/* Animations */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(59,130,246,0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59,130,246,0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(59,130,246,0.3);
+  }
+}
+
+body.dark .btn.primary,
+body.dark .candidate-vote-btn,
+body.dark .vote-bar-fill {
+  animation: glow 2s infinite;
 }

@@ -3,7 +3,6 @@ import Candidate3 from './assets/Candidate3.jpg'
 import Candidate4 from './assets/Candidate4.jpg'
 import Candidate5 from './assets/Candidate5.jpg'
 import Candidate6 from './assets/Candidate6.jpg'
-import Candidate7 from './assets/Candidate7.jpg'
 import Candidate8 from './assets/Candidate8.jpg'
 import JohnAdewale from './assets/JohnAdewale.jpg'
 import AishaMusa from './assets/AishaMusa.jpg'
@@ -27,12 +26,12 @@ export const elections = [
     status: "ongoing",
     description: "Your vote can shape the future of our nation! Be part of the change and choose the leader who will lead with vision and integrity.",
     candidates: [
-      { id: "c1", name: "John Adewale", party: "Progressive Party (PP)", votes: 89923, image: JohnAdewale, },
-      { id: "c2", name: "Sarah Oladipo", party: "Green Unity Party (GUP)", votes: 75412, image: SarahOladipo},
-      { id: "c3", name: "Michael Danjuma", party: "National Alliance (NA)", votes: 50341, image: MichaelDanjuma},
+      { id: "c1", name: "John Adewale", party: "Progressive Party (PP)", votes: 0, image: JohnAdewale, },
+      { id: "c2", name: "Sarah Oladipo", party: "Green Unity Party (GUP)", votes: 0, image: SarahOladipo},
+      { id: "c3", name: "Michael Danjuma", party: "National Alliance (NA)", votes: 0, image: MichaelDanjuma},
     ],
     thumbnail: Candidate8,
-    totalVotes: 89923 + 75412 + 50341,
+    totalVotes: 0 + 0 + 0
     
   },
   {
@@ -41,11 +40,11 @@ export const elections = [
     status: "ongoing",
     description: "Lagos is growing rapidly — your vote matters! Elect a governor who will prioritize progress, security, and opportunity for all residents.",
     candidates: [
-      { id: "c1", name: "Femi Balogun", party: "Unity Democratic Party (UDP)", votes: 21300, image: FemiBalogun },
-      { id: "c2", name: "Tunde Bello", party: "New People Party (NPP)", votes: 19850, image: TundeBello },
-      { id: "c3", name: "Kemi Ojo", party: "Future Movement (FM)", votes: 15900, image: KemiOjo },
+      { id: "c1", name: "Femi Balogun", party: "Unity Democratic Party (UDP)", votes: 0, image: FemiBalogun },
+      { id: "c2", name: "Tunde Bello", party: "New People Party (NPP)", votes: 0, image: TundeBello },
+      { id: "c3", name: "Kemi Ojo", party: "Future Movement (FM)", votes: 0, image: KemiOjo },
     ],
-    totalVotes: 21300 + 19850 + 15900,
+    totalVotes: 0 + 0 + 0,
     thumbnail: Candidate5
   },
   {
@@ -68,11 +67,11 @@ export const elections = [
     status: "completed",
     description: "Strong local leadership starts here! Your vote empowers leaders who will improve local infrastructure, education, and community welfare.",
     candidates: [
-      { id: "c1", name: "James Udo", party: "People First Party (PFP)", votes: 32450, image: JamesUdo },
-      { id: "c2", name: "Grace Nwosu", party: "Renewal Action Party (RAP)", votes: 29890, image: GraceNwosu },
-      { id: "c3", name: "Yusuf Ali", party: "Community Alliance (CA)", votes: 12040, image: YusufAli },
+      { id: "c1", name: "James Udo", party: "People First Party (PFP)", votes: 0, image: JamesUdo },
+      { id: "c2", name: "Grace Nwosu", party: "Renewal Action Party (RAP)", votes: 0, image: GraceNwosu },
+      { id: "c3", name: "Yusuf Ali", party: "Community Alliance (CA)", votes: 0, image: YusufAli },
     ],
-    totalVotes: 32450 + 29890 + 12040,
+    totalVotes: 0,
     thumbnail: Candidate6
   },
   {
@@ -81,11 +80,11 @@ export const elections = [
     status: "ongoing",
     description: "The youth are the future — make your voice count! Vote for leaders who will champion innovation, opportunity, and progress for young people.",
     candidates: [
-      { id: "c1", name: "Fatima Adamu", party: "Youth Empower Party", votes: 620, image: FatimaAdamu },
-      { id: "c2", name: "Samuel King", party: "Change Makers", votes: 545, image: SamuelKing },
-      { id: "c3", name: "Blessing John", party: "NextGen Force", votes: 498, image: BlessingJohn },
+      { id: "c1", name: "Fatima Adamu", party: "Youth Empower Party", votes: 0, image: FatimaAdamu },
+      { id: "c2", name: "Samuel King", party: "Change Makers", votes: 0, image: SamuelKing },
+      { id: "c3", name: "Blessing John", party: "NextGen Force", votes: 0, image: BlessingJohn },
     ],
-    totalVotes: 620 + 545 + 498,
+    totalVotes: 0 + 0 + 0,
     thumbnail: Candidate2
   },
 ];

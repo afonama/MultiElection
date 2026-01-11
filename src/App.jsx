@@ -11,58 +11,26 @@ import Candidates from './pages/Candidates';
 import ElectionDetails from './pages/ElectionDetails';
 import Congrats from './pages/Congrats';
 import Logout from './pages/Logout';
-import ConfirmVote from './components/ConfirmVote'; // <-- import ConfirmVote
+import ConfirmVote from './components/ConfirmVote';
+
 const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      {
-        index: true,
-        element: <Login />
-      },
-      {
-        path: 'register',
-        element: <Register />
-      },
-      {
-        path: 'results',
-        element: <Results />
-      },
-      {
-        path: 'elections',
-        element: <Elections />
-      },
-      {
-        path: 'elections/:id',
-        element: <ElectionDetails />
-      },
-      {
-        path: 'elections/:id/candidates',
-        element: <Candidates />
-      },
-      {
-       path: 'ConfirmVote/:id',
-      element: <ConfirmVote />
-      },
-
-      {
-        path: 'congrats',
-        element: <Congrats />
-      },
-      {
-        path: 'Logout',
-        element: <Logout />
-      },
-      {
-        path: 'ErrorPage',
-        element: <ErrorPage />
-      },
-      {
-        path: 'Login',
-        element: <Login />
-      },
+      { index: true, element: <Login /> },
+      { path: 'register', element: <Register /> },
+      { path: 'results', element: <Results /> },
+      { path: 'elections', element: <Elections /> },
+      { path: 'elections/:id', element: <ElectionDetails /> },
+      { path: 'elections/:id/candidates', element: <Candidates /> },
+      { path: 'congrats', element: <Congrats /> },
+      { path: 'logout', element: <Logout /> },
+      { path: 'login', element: <Login /> },
+      { path: 'errorpage', element: <ErrorPage /> },
+      // FIX: Move ConfirmVote inside children to access Outlet Context
+      { path: 'ConfirmVote/:electionId/:id', element: <ConfirmVote /> },
     ]
   }
 ]);

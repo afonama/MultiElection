@@ -8,7 +8,6 @@ const Election = ({id, title, thumbnail, description}) => {
     const openModal = () => {
         dispatch(uiActions.openUpdateElectionModal())
     }
-
     return(
         <article className="election">
             <div className="election__image">
@@ -20,7 +19,6 @@ const Election = ({id, title, thumbnail, description}) => {
                 <div className="election__cta">
                     <Link to={`/elections/${id}`} className="btn sm">View</Link>
                     <button className="btn sm primary" onClick={openModal}>Edit </button>
-
                 </div>
             </div>
         </article>
