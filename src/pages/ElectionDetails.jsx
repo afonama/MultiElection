@@ -76,14 +76,14 @@ const ElectionDetails = () => {
           <div className="electionDetails__image">
             <img src={currentElection.thumbnail} alt={currentElection.title} />
           </div>
-
+{/* 
           <button
             className="btn reset-btn"
             style={{ marginBottom: "1rem", backgroundColor: "#ff4d4f", color: "#fff" }}
             onClick={handleResetVotes}
           >
             Reset Votes
-          </button>
+          </button> */}
 
           <div className="registered-candidates">
             <h3>Registered Candidates</h3>
